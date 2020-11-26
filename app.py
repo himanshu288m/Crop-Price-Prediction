@@ -20,7 +20,8 @@ def predict():
 			temp=list(json[0].values())
 			vals=np.array(temp)
 			prediction = lr.predict(temp)
-			print("here:",prediction)        
+			print("here:",prediction)
+			        
 			return jsonify({'prediction': str(prediction[0])})
 
 		except:        
@@ -28,7 +29,13 @@ def predict():
 	else:
 		return ('No model here to use')
     
-
+@app.route('/pred', methods=['GET'])
+def pred():
+	n = 0
+	lr = joblib.load("model.pkl")
+	if lr:
+		return predict()
+    
 
 if __name__ == '__main__':
     app.run(debug=True)
