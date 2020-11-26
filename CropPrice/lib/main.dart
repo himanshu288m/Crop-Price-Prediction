@@ -232,51 +232,51 @@ class Main extends StatelessWidget {
                     //     "Yellow": yellow
                     //   }
                     // ];
-                    // var body = [
-                    //   {
-                    //     "year": 0.3,
-                    //     "month": 0.5,
-                    //     "Com__Onion": 0.8,
-                    //     "Com__Potato": 0.6,
-                    //     "Com__Soyabean": 0.3,
-                    //     "Com__Tomato": 0.6,
-                    //     "Com__Wheat": 0.7,
-                    //     "(Red Nanital)": 0.9,
-                    //     "147 Average": 1.0,
-                    //     "1st Sort": 1.0,
-                    //     "Deshi": 0.4,
-                    //     "Desi": 0.5,
-                    //     "Lok-1": 0.4,
-                    //     "Lokwan": 0.3,
-                    //     "Onion": 0.5,
-                    //     "Other": 0.3,
-                    //     "Sup": 0.3,
-                    //     "Yellow": 0.5
-                    //   }
-                    // ];
                     var body = [
                       {
-                        "f0": 0.3,
-                        "f1": 0.5,
-                        "f2": 0.8,
-                        "f3": 0.6,
-                        "f4": 0.3,
-                        "f5": 0.6,
-                        "f6": 0.7,
-                        "f7": 0.9,
-                        "f8": 1.0,
-                        "f9": 1.0,
-                        "f10": 0.4,
-                        "f11": 0.5,
-                        "f12": 0.4,
-                        "f13": 0.3,
-                        "f14": 0.5,
-                        "f15": 0.3,
-                        "f16": 0.3,
-                        "f17": 0.5
+                        "year": 0.3,
+                        "month": 0.5,
+                        "Com__Onion": 0.8,
+                        "Com__Potato": 0.6,
+                        "Com__Soyabean": 0.3,
+                        "Com__Tomato": 0.6,
+                        "Com__Wheat": 0.7,
+                        "(Red Nanital)": 0.9,
+                        "147 Average": 1.0,
+                        "1st Sort": 1.0,
+                        "Deshi": 0.4,
+                        "Desi": 0.5,
+                        "Lok-1": 0.4,
+                        "Lokwan": 0.3,
+                        "Onion": 0.5,
+                        "Other": 0.3,
+                        "Sup": 0.3,
+                        "Yellow": 0.5
                       }
                     ];
-                    print(body);
+                    // var body = [
+                    //   {
+                    //     "f0": 0.3,
+                    //     "f1": 0.5,
+                    //     "f2": 0.8,
+                    //     "f3": 0.6,
+                    //     "f4": 0.3,
+                    //     "f5": 0.6,
+                    //     "f6": 0.7,
+                    //     "f7": 0.9,
+                    //     "f8": 1.0,
+                    //     "f9": 1.0,
+                    //     "f10": 0.4,
+                    //     "f11": 0.5,
+                    //     "f12": 0.4,
+                    //     "f13": 0.3,
+                    //     "f14": 0.5,
+                    //     "f15": 0.3,
+                    //     "f16": 0.3,
+                    //     "f17": 0.5
+                    //   }
+                    // ];
+                    // print(body);
                     var resp = await predictPrice(body);
                     _onBasicAlertPressed(context, resp);
                   },
