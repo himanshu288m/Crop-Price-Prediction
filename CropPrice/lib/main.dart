@@ -29,15 +29,20 @@ class Main extends StatelessWidget {
   Future<String> predictPrice(var body) async {
     var client = new http.Client();
     var uri = Uri.parse("https://crop-price-prediction.herokuapp.com/predict");
-    Map<String, String> headers = {"Content-type": "application/json"};
+    Map<String, String> headers = {
+      "Content-type": "application/json",
+      'Accept-Charset': 'UTF-8'
+    };
     String jsonString = json.encode(body);
+    print('jsonString :' + jsonString);
     try {
       var resp = await client.post(uri, headers: headers, body: jsonString);
       // var resp = await http.get(Uri.parse("http://192.168.1.101:40635"));
       if (resp.statusCode == 200) {
         print("DATA FETCHED SUCCESSFULLY");
+        print(resp);
         var result = json.decode(resp.body);
-        print(json.decode(resp.body));
+        print(result);
         print(result["prediction"]);
         return result["prediction"];
       }
@@ -251,29 +256,7 @@ class Main extends StatelessWidget {
                         0.5
                       ]
                     ];
-                    // var body = [
-                    //   {
-                    //     "f0": 0.3,
-                    //     "f1": 0.5,
-                    //     "f2": 0.8,
-                    //     "f3": 0.6,
-                    //     "f4": 0.3,
-                    //     "f5": 0.6,
-                    //     "f6": 0.7,
-                    //     "f7": 0.9,
-                    //     "f8": 1.0,
-                    //     "f9": 1.0,
-                    //     "f10": 0.4,
-                    //     "f11": 0.5,
-                    //     "f12": 0.4,
-                    //     "f13": 0.3,
-                    //     "f14": 0.5,
-                    //     "f15": 0.3,
-                    //     "f16": 0.3,
-                    //     "f17": 0.5
-                    //   }
-                    // ];
-                    // print(body);
+                    print(body);
                     var resp = await predictPrice(body);
                     _onBasicAlertPressed(context, resp);
                   },
