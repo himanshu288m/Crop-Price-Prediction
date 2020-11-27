@@ -39,16 +39,13 @@ class Main extends StatelessWidget {
         var result = json.decode(resp.body);
         print(json.decode(resp.body));
         print(result["prediction"]);
-        if (result == null) {
-          print("Error");
-        }
         return result["prediction"];
       }
     } catch (e) {
       print("EXCEPTION OCCURRED: $e");
       return null;
     }
-    print("Error");
+    print("Error1");
     return null;
   }
 
