@@ -20,7 +20,9 @@ def predict():
 
         try:
             data = request.get_json()
-
+            modelfile = 'Xgmodel.pickle'
+            model = p.load(open(modelfile,'rb'))
+            print(model)
             prediction = np.array2string(model.predict(data))
 
             return jsonify({'prediction': prediction})
@@ -31,9 +33,7 @@ def predict():
 
 
 if __name__ == '__main__':
-    modelfile = 'Xgmodel.pickle'
-    model = p.load(open(modelfile,'rb'))
-    print(model)
+    
     app.run(debug=True)
 
 
