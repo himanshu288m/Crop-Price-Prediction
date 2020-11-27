@@ -20,6 +20,7 @@ def predict():
 			model_columns = joblib.load("model_cols.pkl")
 			temp=list(json[0].values())
 			lst.append(temp)
+			print(lst)
 			vals=np.array(lst)
 			#.reshape((1,len(temp))
 			#print('numpy value',vals)
