@@ -15,11 +15,12 @@ def predict():
 	lr = joblib.load("model.pkl")
 	if lr:
 		try:
+			lst = []
 			json = request.get_json()	 
 			model_columns = joblib.load("model_cols.pkl")
 			temp=list(json[0].values())
-			print(len(temp))
-			vals=np.array(temp)
+			lst.append(temp)
+			vals=np.array(lst)
 			#.reshape((1,len(temp))
 			#print('numpy value',vals)
 			prediction = lr.predict(vals)
