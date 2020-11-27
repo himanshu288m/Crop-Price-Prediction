@@ -45,7 +45,7 @@ class Main extends StatelessWidget {
       print("EXCEPTION OCCURRED: $e");
       return null;
     }
-    print("Error1");
+    print("Error");
     return null;
   }
 
@@ -230,26 +230,26 @@ class Main extends StatelessWidget {
                     //   }
                     // ];
                     var body = [
-                      {
-                        "year": 0.3,
-                        "month": 0.5,
-                        "Com__Onion": 0.8,
-                        "Com__Potato": 0.6,
-                        "Com__Soyabean": 0.3,
-                        "Com__Tomato": 0.6,
-                        "Com__Wheat": 0.7,
-                        "(Red Nanital)": 0.9,
-                        "147 Average": 1.0,
-                        "1st Sort": 1.0,
-                        "Deshi": 0.4,
-                        "Desi": 0.5,
-                        "Lok-1": 0.4,
-                        "Lokwan": 0.3,
-                        "Onion": 0.5,
-                        "Other": 0.3,
-                        "Sup": 0.3,
-                        "Yellow": 0.5
-                      }
+                      [
+                        0.3,
+                        0.5,
+                        0.8,
+                        0.6,
+                        0.3,
+                        0.6,
+                        0.7,
+                        0.9,
+                        1.0,
+                        1.0,
+                        0.4,
+                        0.5,
+                        0.4,
+                        0.3,
+                        0.5,
+                        0.3,
+                        0.3,
+                        0.5
+                      ]
                     ];
                     // var body = [
                     //   {
