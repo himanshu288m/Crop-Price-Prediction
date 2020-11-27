@@ -20,13 +20,13 @@ def predict():
 			model_columns = joblib.load("model_cols.pkl")
 			temp=list(json[0].values())
 			lst.append(temp)
-			print(lst)
 			vals=np.array(lst)
 			#.reshape((1,len(temp))
 			#print('numpy value',vals)
 			prediction = lr.predict(vals)
 			print("here:",prediction)        
-			return jsonify({'prediction': str(prediction[0])})
+			#return jsonify({'prediction': str(prediction[0])})
+			return lst
 
 		except:        
 			return jsonify({'trace': traceback.format_exc()})
