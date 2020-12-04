@@ -6,6 +6,7 @@ import traceback
 from flask_restful import reqparse
 import json
 import pickle as p
+from sklearn.preprocessing import StandardScaler
 
 app = Flask(__name__)
 
@@ -23,8 +24,10 @@ def predict():
             modelfile = 'Xgmodel.pickle'
             model = p.load(open(modelfile,'rb'))
             print(model)
+            scaler = StandardScaler()
+            scaler.fit(data)
             prediction = np.array2string(model.predict(data))
-
+            prediction = scaler.transform(prediction)
             return jsonify({'prediction': prediction})
 
         except:
