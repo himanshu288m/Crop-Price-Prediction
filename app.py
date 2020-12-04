@@ -27,7 +27,6 @@ def predict():
             scaler = StandardScaler()
             scaler.fit(data)
             prediction = np.array2string(model.predict(data))
-            prediction = [[float(prediction[1:-1])]
             return jsonify({'prediction': prediction})
 
         except:
